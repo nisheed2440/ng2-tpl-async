@@ -17,8 +17,9 @@
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
+      "prefix": "bjs",
       "styles": [
+        "../node_modules/foundation-sites/dist/css/foundation.min.css",
         "styles.css"
       ],
       "scripts": [],
@@ -50,7 +51,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

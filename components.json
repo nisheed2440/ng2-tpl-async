@@ -1,0 +1,160 @@
+{
+  "home": [{
+    "view": [{
+        "component": "HeaderComponent",
+        "data": {
+          "headerTitle": "BJ's Warehouse - Home",
+          "children": [{
+            "component": "TopNavComponent",
+            "data": {
+              "navItems": [{
+                  "label": "Link 1",
+                  "link": "http://www.google.com"
+                },
+                {
+                  "label": "Link 2",
+                  "link": "http://www.google.com"
+                }
+              ]
+            },
+            "children": []
+          }]
+        }
+      },
+      {
+        "component": "CalloutComponent",
+        "data": {
+          "calloutClasses": "primary small",
+          "calloutTitle": "Really big special this week on items.",
+          "children": []
+        }
+      },
+      {
+        "component": "RowComponent",
+        "data": {
+          "rowClasses": "small-up-2 large-up-4",
+          "children": [{
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            },
+            {
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            },
+            {
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            },
+            {
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "component": "FooterComponent",
+        "data": {
+          "children": [{
+            "component": "CalloutComponent",
+            "data": {
+              "calloutClasses": "secondary large",
+              "calloutTitle": "Footer",
+              "children": []
+            }
+          }]
+        }
+      }
+    ]
+  }],
+  "pdp": [{
+    "view": [{
+        "component": "HeaderComponent",
+        "data": {
+          "headerTitle": "BJ's Warehouse - PDP",
+          "children": [{
+            "component": "TopNavComponent",
+            "data": {
+              "navItems": [{
+                  "label": "Link 1",
+                  "link": "http://www.google.com"
+                },
+                {
+                  "label": "Link 2",
+                  "link": "http://www.google.com"
+                }
+              ]
+            },
+            "children": []
+          }]
+        }
+      },
+      {
+        "component": "CalloutComponent",
+        "data": {
+          "calloutClasses": "primary small",
+          "calloutTitle": "Consequat deserunt nisi aliquip ut exercitation commodo et fugiat.",
+          "children": []
+        }
+      },
+      {
+        "component": "RowComponent",
+        "data": {
+          "rowClasses": "small-up-1 large-up-2",
+          "children": [{
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            },
+            {
+              "component": "ColumnComponent",
+              "data": {
+                "columnClasses": "",
+                "children": [{
+                  "component": "ProductTileComponent"
+                }]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "component": "FooterComponent",
+        "data": {
+          "children": [{
+            "component": "CalloutComponent",
+            "data": {
+              "calloutClasses": "secondary large",
+              "calloutTitle": "Footer",
+              "children": []
+            }
+          }]
+        }
+      }
+    ]
+  }]
+}

@@ -1,0 +1,10 @@
+<header class="top-bar bjs-header">
+  <div class="top-bar-left">
+    <ul class="menu">
+      <li class="menu-text">{{data.headerTitle}}</li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+   <template [bjsDomTreeNode]="data.children"></template>
+  </div>
+</header>
