@@ -1,4 +1,5 @@
-# BjsTplJson - Works with AOT
+# NG2 Template Async - Works with AOT
+This POC was created to dcouple Angular from CMS and exploring the posibility of providing Angular with `layout` and `content` as a `service`.
 
 You will have to have `two` terminal instances running, one for the angular development server and one for the views server.
 
