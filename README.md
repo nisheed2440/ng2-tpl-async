@@ -1,27 +1,14 @@
-# BjsTplJson
+# BjsTplJson - Works with AOT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
+You will have to have `two` terminal instances running, one for the angular development server and one for the views server.
 
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## View server
+Open a new terminal instance. Run `npm run views` for a views server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change the `components.json` file.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## The Dynamic Dom Tree directives
+Here is where all the magic happens `src\app\directives\dom-tree-root.directive.ts`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+& `src\app\directives\dom-tree-node.directive.ts`
