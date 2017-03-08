@@ -1,3 +1,4 @@
+import { DirectivesModule } from '../directives/directives.module';
 import { BrowseModule } from './browse/browse.module';
 import { OrganismsModule } from '../organisms/organisms.module';
 import { NgModule } from '@angular/core';
@@ -7,7 +8,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     OrganismsModule,
-    BrowseModule
+    BrowseModule,
+    DirectivesModule
   ],
   declarations: []
 })

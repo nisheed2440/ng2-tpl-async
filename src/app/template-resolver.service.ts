@@ -7,22 +7,35 @@ import { Injectable } from '@angular/core';
 export class TemplateResolverService implements Resolve<any>{
 
   constructor(private router:Router, private http: Http, private templateCacheService: TemplateCacheService) {}
+
+  redirectNotFound(page:string):any{
+    console.log(`Template for ${page} page not found!!`);
+    this.router.navigate(['/not-found']);
+    return null;
+  }
   
   resolve(route:ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<any> | Template[]{
-     var page = 'home';
-     //Check if template cache has the template
-     var template = this.templateCacheService.getTemplateFromCache(page);
-     if(template){
-       return template;
-     } else {
-      return this.templateCacheService.getTemplate(page).then(data => {
-        if(data){
-          return data
+     var page = route.data['page'];
+     if(page){
+      //Check template cache
+      var templateData = this.templateCacheService.getTemplateFromCache(page);
+      if(templateData){
+        return templateData;
+      }
+      //Else get template data from backend
+      return this.templateCacheService.getTemplate(page).then(templateData => {
+        if(templateData){
+          return templateData
         } else {
-          this.router.navigate(['/not-found']);
-          return null;
+          //Redirect to not found
+          return this.redirectNotFound(page);
         }
+      }).catch((error) => {
+        //Redirect to not found
+        this.redirectNotFound(page);
       });
+     } else {
+       console.log(`Page name = ${page}`);
      }
   }
 

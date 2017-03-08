@@ -1,4 +1,4 @@
 {
-  "/api/pdp": "/pdp",
+  "/api/browse": "/browse",
   "/api/home": "/home"
 }

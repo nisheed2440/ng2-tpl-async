@@ -1,7 +1,9 @@
-import { BrowseComponent } from './pages/browse/browse.component';
-
-console.log(BrowseComponent);
+import { RouterComponent } from './organisms/router/router.component';
+import { HeaderComponent } from './organisms/header/header.component';
+import { FooterComponent } from './organisms/footer/footer.component';
 
 export const ComponentRegistry =  {
-    BrowseComponent
+    RouterComponent,
+    HeaderComponent,
+    FooterComponent
 }

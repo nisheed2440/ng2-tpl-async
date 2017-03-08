@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+import { Template } from '../../../template-cache.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  children:Template[] = [];
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.children = this.route.snapshot.data['template'];
   }
 
 }

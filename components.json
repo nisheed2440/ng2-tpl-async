@@ -2,7 +2,26 @@
   "home": [{
     "view": [
       {
+        "name":"FooterComponent",
+        "data":{},
+        "children":[]
+      }
+    ]
+  }],
+  "browse": [{
+    "view": [
+      {
+        "name":"HeaderComponent",
+        "data":{},
+        "children":[]
+      },
+      {
         "name":"RouterComponent",
+        "data":{},
+        "children":[]
+      },
+      {
+        "name":"FooterComponent",
         "data":{},
         "children":[]
       }

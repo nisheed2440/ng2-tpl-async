@@ -1,5 +1,6 @@
+import { ComponentRegistry } from './app.components.registry';
 import { Http } from '@angular/http';
-import { Injectable } from '@angular/core';
+import { ComponentFactoryResolver, Injectable, ViewContainerRef } from '@angular/core';
 
 export class Template{
   constructor(
@@ -13,10 +14,14 @@ export class Template{
 @Injectable()
 export class TemplateCacheService {
   private templateCache: any = {};
-  constructor(private http:Http) { }
+  constructor(
+    private http:Http, 
+    private resolver: ComponentFactoryResolver
+  ) { }
 
   setTemplateInCache(page, data){
     this.templateCache[page] = data;
+    console.log(this.templateCache);
     return this.getTemplateFromCache(page);
   }
   
@@ -29,6 +34,18 @@ export class TemplateCacheService {
      return this.http.get(url).toPromise().then((response) => {
        return this.setTemplateInCache(page,response.json()[0].view);
      });
+  }
+
+  createTemplate(vcf:ViewContainerRef, componentObj:Template){
+    if(componentObj.name in ComponentRegistry){
+      var factory  = this.resolver.resolveComponentFactory(ComponentRegistry[componentObj.name]);
+      var component = vcf.createComponent(factory);
+      component.instance['data'] = componentObj.data;
+      component.instance['children'] = componentObj.children;
+      console.log(component.instance);
+    } else {
+      console.info(`Unknown ${componentObj.name} component`);
+    }
   }
 
 }

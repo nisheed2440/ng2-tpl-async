@@ -11,7 +11,16 @@ const BROWSE_ROUTES:Routes = [
         path:'browse', 
         component:BrowseComponent, 
         children:[
-            { path:'home', component:HomeComponent, resolve:{template:TemplateResolverService} },
+            { 
+                path:'home', 
+                component:HomeComponent, 
+                resolve:{
+                    template:TemplateResolverService
+                },
+                data:{
+                    page:'home'
+                }
+            },
             { path:'product', children: [
                 { path: ':id', component:ProductDetailsComponent },
                 { path:'', pathMatch:'full', redirectTo:'/not-found' },
@@ -22,6 +31,9 @@ const BROWSE_ROUTES:Routes = [
         ],
         resolve:{
             template: TemplateResolverService
+        },
+        data:{
+            page:'browse'
         }
     },
     { path:'not-found', component:NotFoundComponent},
