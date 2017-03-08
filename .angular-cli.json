@@ -19,8 +19,7 @@
       "tsconfig": "tsconfig.json",
       "prefix": "bjs",
       "styles": [
-        "../node_modules/foundation-sites/dist/css/foundation.min.css",
-        "styles.css"
+        "styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
